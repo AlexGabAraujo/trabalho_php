@@ -29,43 +29,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Cadastro</title>
-    <script>
-        function validar(event) {
-            event.preventDefault(); // Evita envio padrão
 
-            const nome = document.getElementById("nome").value.trim();
-            const cpf = document.getElementById("cpf").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const senha = document.getElementById("senha").value.trim();
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!nome || !cpf || !email || !senha) {
-                alert("Todos os campos são obrigatórios.");
-                return;
-            }
-
-            if (!emailRegex.test(email)) {
-                alert("E-mail inválido.");
-                return;
-            }
-
-            document.querySelector("form").submit();
-        }
-    </script>
+  
 </head>
 <body>
 
-<h2>Formulário de Cadastro</h2>
-
-<form method="post" action="">
-    Nome: <input type="text" id="nome" name="nome"><br><br>
-    CPF: <input type="text" id="cpf" name="CPF"><br><br>
-    Email: <input type="email" id="email" name="email"><br><br>
-    Senha: <input type="password" id="senha" name="senha"><br><br>
-    <input type="submit" value="Cadastrar" onclick="validar(event)">
-</form>
-
 </body>
 </html>
+
+
+
