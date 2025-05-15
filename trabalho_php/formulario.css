@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box1 {
+  background-color:rgb(137, 191, 214);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 100vh;
+}
+.box2 {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa de formulário */
+.box3 {
+  background-color: rgb(217, 235, 243);
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+
+  position: absolute;
+  top: 50%;
+  left: 40%; /* Ajuste para centralizar mais à esquerda */
+  transform: translate(-50%, -50%);
+}
+#titulo {
+  font-size: 120%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#nome,
+#cpf,
+#email,
+#senha {
+  width: 260px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+  outline: none;
+}
+
+#cadastrar {
+  background-color: rgb(195, 229, 244);
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: 0px solid  white;
+  position: absolute;
+  top: 87%;
+  left: 55%; 
+}
+
+#cadastrar2 {
+  background-color: rgb(195, 229, 244);
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: 0px solid  white;
+  position: absolute;
+  top: 87%;
+  left: 35%; 
+}
+
+#login{
+  background-color: rgb(195, 229, 244);
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: 0px solid  white;
+  position: absolute;
+  top: 87%;
+  left: 15%; 
+}
+
+#cadastrar:hover {
+  background-color: rgb(155, 205, 226);
+}
+
+#entrar {
+  background-color: rgb(195, 229, 244);
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: 0px solid  white;
+  position: absolute;
+  top: 75%;
+  left: 35%; 
+}
+
+#entrar:hover {
+  background-color: rgb(155, 205, 226);
+}
+
