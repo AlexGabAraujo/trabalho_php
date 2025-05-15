@@ -46,6 +46,10 @@
             alert("Todos os campos são obrigatórios.");
             return;
         }
+        if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
 
         document.querySelector("form").submit();
     }
@@ -53,3 +57,33 @@
 
 </body>
 </html>
+
+<script>
+    function validar(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const cpf = document.getElementById("cpf").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const senha = document.getElementById("senha").value.trim();
+        const mensagemErro = document.getElementById("mensagemErro");
+
+        // Definição da expressão regular para validação do e-mail
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Verificação de campos vazios
+        if (!nome || !cpf || !email || !senha) {
+            alert("Todos os campos são obrigatórios.");
+            return;
+        }
+
+        // Validação do e-mail
+        if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
+
+        // Se passar na validação, o formulário é enviado
+        document.querySelector("form").submit();
+    }
+</script>
