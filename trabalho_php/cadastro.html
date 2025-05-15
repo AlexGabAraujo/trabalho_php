@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Corrigido</title>
+    <link rel="stylesheet" href="formulario.css">
+
+  <style>
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">
+      <div class="box3">
+      
+               <h1><p id="titulo">cadastro</p></h1>
+       
+               <form method="post" action="cadastro.php">
+                <input type="text" id="nome" name="nome" placeholder="Nome"><br><br>
+                <input type="text" id="cpf" name="CPF" placeholder="CPF"><br><br>
+                <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
+                <input type="password" id="senha" name="senha" placeholder="Senha"><br><br>
+                <input type="submit" id="cadastrar" value="Cadastrar" onclick="validar(event)">
+
+            </form>
+           
+
+        </div>
+      </div>
+    </div>
+    <div class="box2">
+    
+  </div>
+  
+    <script>
+    function validar(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const cpf = document.getElementById("cpf").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const senha = document.getElementById("senha").value.trim();
+        const mensagemErro = document.getElementById("mensagemErro");
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!nome || !cpf || !email || !senha) {
+            alert("Todos os campos são obrigatórios.");
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert("Por favor, insira um e-mail válido.");
+            return;
+        }
+
+        document.querySelector("form").submit();
+    }
+</script>
+</body>
+</html>
